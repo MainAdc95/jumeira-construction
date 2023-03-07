@@ -56,7 +56,7 @@ export default function Home() {
 
             <Link
                 href="/"
-                className=" absolute top-10 left-10 z-10 w-[100px] h-[105.86px] md:w-[160px] md:h-[169.4px]"
+                className=" absolute top-10 left-10 -z-10 w-[100px] h-[105.86px] md:w-[160px] md:h-[169.4px]"
             >
                 <Image
                     src="/logo.png"
@@ -72,10 +72,10 @@ export default function Home() {
                 <ContactUs />
             </div>
 
-            <div className="absolute z-10 bottom-0 w-full flex md:bg-transparent">
+            <div className="fixed z-10 bottom-5 w-full flex md:bg-transparent">
                 {/* bg-[#c3af6c] bg-opacity-25 */}
-                <div className="container flex flex-col p-4 md:p-10 mx-auto">
-                    <h2 className="text-md text-white md:text-lg text-center md:text-black tracking-normal">
+                <div className="container flex flex-col px-4 mx-auto">
+                    <h2 className="text-md md:text-lg text-center text-black tracking-normal">
                         {SEO_DESCRIPTION}
                     </h2>
 
