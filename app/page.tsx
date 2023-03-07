@@ -18,7 +18,7 @@ import { createPortal } from "react-dom";
 export default function Home() {
     return (
         <>
-            <div className="h-screen w-full">
+            <div className="md:h-screen h-[calc(80vh)] w-full">
                 <Canvas
                     camera={{ position: [0, -10, 65], fov: 50 }}
                     dpr={[1, 2]}
@@ -72,7 +72,7 @@ export default function Home() {
                 <ContactUs />
             </div>
 
-            <div className="fixed z-10 bottom-5 w-full flex md:bg-transparent">
+            <div className="md:fixed md:z-10 md:bottom-5 w-full flex bg-transparent md:py-0 md:border-t-0 border-t border-t-white py-4">
                 {/* bg-[#c3af6c] bg-opacity-25 */}
                 <div className="container flex flex-col px-4 mx-auto">
                     <h2 className="text-md md:text-lg text-center text-black tracking-normal">
