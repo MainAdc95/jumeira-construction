@@ -8,7 +8,7 @@ module.exports = {
     theme: {
         extend: {
             backgroundPosition: {
-                "offset-center": "0% 60%",
+                "offset-center": "0% 70%",
             },
         },
     },
