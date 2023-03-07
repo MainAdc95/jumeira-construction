@@ -6,7 +6,11 @@ module.exports = {
         "./icons/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundPosition: {
+                "offset-center": "0% 60%",
+            },
+        },
     },
     plugins: [],
 };

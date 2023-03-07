@@ -18,7 +18,7 @@ import { createPortal } from "react-dom";
 export default function Home() {
     return (
         <>
-            <div className="md:h-screen h-[calc(80vh)] w-full">
+            <div className="relative md:h-screen h-[calc(80vh)] w-full">
                 <Canvas
                     camera={{ position: [0, -10, 65], fov: 50 }}
                     dpr={[1, 2]}
@@ -52,11 +52,25 @@ export default function Home() {
                         </group>
                     </Suspense>
                 </Canvas>
+
+                <div
+                    className="absolute top-0 left-0 flex w-full h-full -z-10 opacity-30 bg-no-repeat md:bg-offset-center bg-bottom"
+                    style={{
+                        backgroundImage: `url("/bg.svg")`,
+                    }}
+                >
+                    <div className="w-[800px] mx-auto md:mt-40 mt-auto mb-24">
+                        <h2 className="text-2xl text-center">
+                            Get ready for a fresh new look! Our website is
+                            undergoing a major makeover.
+                        </h2>
+                    </div>
+                </div>
             </div>
 
             <Link
                 href="/"
-                className=" absolute top-10 left-10 -z-10 w-[100px] h-[105.86px] md:w-[160px] md:h-[169.4px]"
+                className="fixed top-10 left-10 -z-10 w-[100px] h-[105.86px] md:w-[160px] md:h-[169.4px]"
             >
                 <Image
                     src="/logo.png"
@@ -68,7 +82,7 @@ export default function Home() {
                 />
             </Link>
 
-            <div className="absolute top-10 right-10 z-10">
+            <div className="fixed top-10 right-10 z-10">
                 <ContactUs />
             </div>
 
@@ -166,7 +180,7 @@ function Map() {
             <div>
                 <button
                     onClick={() => setOpen(true)}
-                    className="rounded-lg overflow-hidden w-7 h-7 bg-[#c3af6c] flex drop-shadow-lg"
+                    className="rounded-lg overflow-hidden w-7 h-7 bg-[#c3af6c] flex"
                 >
                     <MapIcon className="w-6 h-6 rouned-xl m-auto text-white" />
                 </button>
