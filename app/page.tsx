@@ -72,7 +72,8 @@ export default function Home() {
                 <ContactUs />
             </div>
 
-            <div className="absolute z-10 bottom-0 w-full flex md:bg-transparent bg-[#c3af6c]">
+            <div className="absolute z-10 bottom-0 w-full flex md:bg-transparent">
+                {/* bg-[#c3af6c] bg-opacity-25 */}
                 <div className="container flex flex-col p-4 md:p-10 mx-auto">
                     <h2 className="text-md text-white md:text-lg text-center md:text-black tracking-normal">
                         {SEO_DESCRIPTION}
