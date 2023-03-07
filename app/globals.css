@@ -9,3 +9,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background: linear-gradient(155deg, #ffffff 20%, #c3af6c);
+}

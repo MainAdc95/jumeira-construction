@@ -1,9 +1,12 @@
 import "./globals.css";
 import { SEO_DESCRIPTION, SEO_TITLE } from "@lib/constants";
-import { Inter } from "next/font/google";
+import { Aboreto, Inter, Roboto } from "next/font/google";
 import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Aboreto({
+    subsets: ["latin"],
+    weight: ["400"],
+});
 
 export const metadata = {
     title: SEO_TITLE,
@@ -44,7 +47,10 @@ export default function RootLayout({
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
             </Head>
-            <body className={inter.className}>{children}</body>
+
+            <body>
+                <main className={inter.className}>{children}</main>
+            </body>
         </html>
     );
 }

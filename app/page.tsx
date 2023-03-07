@@ -18,67 +18,69 @@ import { createPortal } from "react-dom";
 export default function Home() {
     return (
         <>
-            <Canvas camera={{ position: [0, -10, 65], fov: 50 }} dpr={[1, 2]}>
-                <pointLight
-                    position={[100, 100, 100]}
-                    intensity={0.8}
-                    color="#c3af6c"
-                />
-                <hemisphereLight
-                    color="#ffffff"
-                    groundColor="#c3af6c"
-                    position={[-7, 25, 13]}
-                    intensity={0.85}
-                />
-                <Suspense fallback={null}>
-                    <group position={[0, 10, 0]}>
-                        <Rig>
-                            <Model url="/compressed.glb" />
-                        </Rig>
-
-                        <ContactShadows
-                            rotation-x={Math.PI / 2}
-                            position={[0, -35, 0]}
-                            opacity={0.25}
-                            width={100}
-                            height={100}
-                            blur={2}
-                            far={50}
-                        />
-                    </group>
-                </Suspense>
-            </Canvas>
-
-            <div className="absolute top-0 left-0 w-full flex items-start justify-between p-4 md:p-10">
-                <Link
-                    href="/"
-                    className="relative w-[100px] h-[105.86px] md:w-[160px] md:h-[169.4px]"
+            <div className="h-screen w-full">
+                <Canvas
+                    camera={{ position: [0, -10, 65], fov: 50 }}
+                    dpr={[1, 2]}
                 >
-                    <Image
-                        src="/logo.png"
-                        alt="Jumeira"
-                        fill
-                        style={{
-                            objectFit: "contain",
-                        }}
+                    <pointLight
+                        position={[100, 100, 100]}
+                        intensity={0.8}
+                        color="#c3af6c"
                     />
-                </Link>
+                    <hemisphereLight
+                        color="#ffffff"
+                        groundColor="#c3af6c"
+                        position={[-7, 25, 13]}
+                        intensity={0.85}
+                    />
+                    <Suspense fallback={null}>
+                        <group position={[0, 10, 0]}>
+                            <Rig>
+                                <Model url="/compressed.glb" />
+                            </Rig>
 
+                            <ContactShadows
+                                rotation-x={Math.PI / 2}
+                                position={[0, -35, 0]}
+                                opacity={0.25}
+                                width={100}
+                                height={100}
+                                blur={2}
+                                far={50}
+                            />
+                        </group>
+                    </Suspense>
+                </Canvas>
+            </div>
+
+            <Link
+                href="/"
+                className=" absolute top-10 left-10 z-10 w-[100px] h-[105.86px] md:w-[160px] md:h-[169.4px]"
+            >
+                <Image
+                    src="/logo.png"
+                    alt="Jumeira"
+                    fill
+                    style={{
+                        objectFit: "contain",
+                    }}
+                />
+            </Link>
+
+            <div className="absolute top-10 right-10 z-10">
                 <ContactUs />
             </div>
 
-            <div className="absolute bottom-0 container flex flex-col p-4 md:p-10 left-1/2 -translate-x-1/2 w-full">
-                <h2
-                    className="text-md md:text-lg text-white tracking-normal"
-                    style={{
-                        textShadow: "0 0px 2px black",
-                    }}
-                >
-                    {SEO_DESCRIPTION}
-                </h2>
+            <div className="absolute z-10 bottom-0 w-full flex md:bg-transparent bg-[#c3af6c]">
+                <div className="container flex flex-col p-4 md:p-10 mx-auto">
+                    <h2 className="text-md text-white md:text-lg text-center md:text-black tracking-normal">
+                        {SEO_DESCRIPTION}
+                    </h2>
 
-                <div className="mx-auto mt-5">
-                    <SocialMedia />
+                    <div className="mx-auto mt-5">
+                        <SocialMedia />
+                    </div>
                 </div>
             </div>
         </>
@@ -93,8 +95,8 @@ function SocialMedia() {
                 href: "https://www.facebook.com/jumeirauniversity",
                 target: "_blank",
                 icon: (
-                    <div className="bg-white rounded-lg overflow-hidden">
-                        <FacebookIcon className="text-[#c3af6c] w-7 h-7 rouned-xl" />
+                    <div className="bg-white rounded-lg overflow-hidden drop-shadow-lg">
+                        <FacebookIcon className="text-[#c3af6c] w-7 h-7" />
                     </div>
                 ),
             },
@@ -103,8 +105,8 @@ function SocialMedia() {
                 href: "https://twitter.com/JumeiraUni",
                 target: "_blank",
                 icon: (
-                    <div className="bg-white rounded-lg overflow-hidden">
-                        <TwitterIcon className="text-[#c3af6c] w-7 h-7 rouned-xl" />
+                    <div className="bg-white rounded-lg overflow-hidden drop-shadow-lg">
+                        <TwitterIcon className="text-[#c3af6c] w-7 h-7" />
                     </div>
                 ),
             },
@@ -113,8 +115,8 @@ function SocialMedia() {
                 href: "https://www.linkedin.com/company/jumeira-university/",
                 target: "_blank",
                 icon: (
-                    <div className="bg-white rounded-lg overflow-hidden">
-                        <LinkedinIcon className="text-[#c3af6c] w-7 h-7 rouned-xl" />
+                    <div className="bg-white rounded-lg overflow-hidden drop-shadow-lg">
+                        <LinkedinIcon className="text-[#c3af6c] w-7 h-7" />
                     </div>
                 ),
             },
@@ -123,7 +125,7 @@ function SocialMedia() {
                 href: "https://www.instagram.com/jumeirauni/",
                 target: "_blank",
                 icon: (
-                    <div className="bg-white rounded-lg overflow-hidden">
+                    <div className="bg-white rounded-lg overflow-hidden drop-shadow-lg">
                         <InstagramIcon className="text-[#c3af6c] w-7 h-7" />
                     </div>
                 ),
@@ -133,7 +135,7 @@ function SocialMedia() {
                 href: "mailto: info@ju.ac.ae",
                 target: "_blank",
                 icon: (
-                    <div className="rounded-lg overflow-hidden w-7 h-7 bg-[#c3af6c] flex">
+                    <div className="rounded-lg overflow-hidden w-7 h-7 bg-[#c3af6c] flex drop-shadow-lg">
                         <EnvelopeIcon className="w-6 h-6 rouned-xl m-auto text-white" />
                     </div>
                 ),
@@ -163,7 +165,7 @@ function Map() {
             <div>
                 <button
                     onClick={() => setOpen(true)}
-                    className="rounded-lg overflow-hidden w-7 h-7 bg-[#c3af6c] flex"
+                    className="rounded-lg overflow-hidden w-7 h-7 bg-[#c3af6c] flex drop-shadow-lg"
                 >
                     <MapIcon className="w-6 h-6 rouned-xl m-auto text-white" />
                 </button>
