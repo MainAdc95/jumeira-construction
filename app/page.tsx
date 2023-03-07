@@ -96,7 +96,7 @@ function SocialMedia() {
                 href: "https://www.facebook.com/jumeirauniversity",
                 target: "_blank",
                 icon: (
-                    <div className="bg-white rounded-lg overflow-hidden drop-shadow-lg">
+                    <div className="bg-white rounded-lg overflow-hidden">
                         <FacebookIcon className="text-[#c3af6c] w-7 h-7" />
                     </div>
                 ),
@@ -106,7 +106,7 @@ function SocialMedia() {
                 href: "https://twitter.com/JumeiraUni",
                 target: "_blank",
                 icon: (
-                    <div className="bg-white rounded-lg overflow-hidden drop-shadow-lg">
+                    <div className="bg-white rounded-lg overflow-hidden">
                         <TwitterIcon className="text-[#c3af6c] w-7 h-7" />
                     </div>
                 ),
@@ -116,7 +116,7 @@ function SocialMedia() {
                 href: "https://www.linkedin.com/company/jumeira-university/",
                 target: "_blank",
                 icon: (
-                    <div className="bg-white rounded-lg overflow-hidden drop-shadow-lg">
+                    <div className="bg-white rounded-lg overflow-hidden">
                         <LinkedinIcon className="text-[#c3af6c] w-7 h-7" />
                     </div>
                 ),
@@ -126,7 +126,7 @@ function SocialMedia() {
                 href: "https://www.instagram.com/jumeirauni/",
                 target: "_blank",
                 icon: (
-                    <div className="bg-white rounded-lg overflow-hidden drop-shadow-lg">
+                    <div className="bg-white rounded-lg overflow-hidden">
                         <InstagramIcon className="text-[#c3af6c] w-7 h-7" />
                     </div>
                 ),
@@ -136,7 +136,7 @@ function SocialMedia() {
                 href: "mailto: info@ju.ac.ae",
                 target: "_blank",
                 icon: (
-                    <div className="rounded-lg overflow-hidden w-7 h-7 bg-[#c3af6c] flex drop-shadow-lg">
+                    <div className="rounded-lg overflow-hidden w-7 h-7 bg-[#c3af6c] flex">
                         <EnvelopeIcon className="w-6 h-6 rouned-xl m-auto text-white" />
                     </div>
                 ),
@@ -175,10 +175,10 @@ function Map() {
             {open &&
                 createPortal(
                     <div
-                        className="absolute top-0 left-0 z-10 flex w-full h-full bg-black bg-opacity-25 overflow-y-auto"
+                        className="fixed top-0 left-0 z-10 flex w-full h-full bg-black bg-opacity-25 overflow-y-auto"
                         onClick={() => setOpen(false)}
                     >
-                        <div className="relative bg-white rounded-lg overflow-hidden m-auto max-w-full w-full h-screen md:w-[800px] md:h-[700px]">
+                        <div className="relative bg-white rounded-lg overflow-hidden m-auto max-w-full w-full h-[80%] md:w-[800px] md:h-[700px] md:py-4">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.691780178394!2d55.255038600000006!3d25.146109199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69093cf1905d%3A0xc204395cca339c7!2zSnVtZWlyYSBVbml2ZXJzaXR5INis2KfZhdi52Kkg2KzZhdmK2LHYpw!5e0!3m2!1sen!2sae!4v1678172659679!5m2!1sen!2sae"
                                 className="rounded-lg overflow-hidden border-none w-full h-full"
