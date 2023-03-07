@@ -22,10 +22,10 @@ export default function Home() {
 
                 <div className="absolute left-0 flex w-full py-8 mx-auto mt-auto mb-24 -translate-y-1/2 pointer-events-none top-1/2">
                     <div className="container flex flex-col items-center mx-4 md:mx-auto">
-                        <h2 className="md:text-4xl text-2xl text-center bg-black text-[#c3af6c] mb-2 py-2 px-6 rounded-md opacity-80">
+                        <h2 className="md:text-4xl text-xl text-center bg-black text-[#c3af6c] mb-2 md:py-2 md:px-6 px-2 rounded-md opacity-80">
                             Get ready for a fresh new look! Our website is
                         </h2>
-                        <h2 className="md:text-3xl text-xl text-center bg-black text-[#c3af6c] py-2 px-6 rounded-md opacity-80">
+                        <h2 className="md:text-3xl text-lg text-center bg-black text-[#c3af6c] py-2 md:px-6 px-2 rounded-md opacity-80">
                             undergoing a major makeover.
                         </h2>
                     </div>
@@ -34,7 +34,7 @@ export default function Home() {
 
             <Link
                 href="/"
-                className="fixed top-10 left-10 -z-10 w-[100px] h-[105.86px] md:w-[160px] md:h-[169.4px]"
+                className="absolute md:top-10 md:left-10 top-5 left-5 -z-10 w-[100px] h-[105.86px] md:w-[160px] md:h-[169.4px]"
             >
                 <Image
                     src="/logo.png"
@@ -46,7 +46,7 @@ export default function Home() {
                 />
             </Link>
 
-            <div className="fixed z-10 top-10 right-10">
+            <div className="absolute z-10 md:top-10 md:right-10 top-5 right-5">
                 <ContactForm />
             </div>
 
