@@ -53,7 +53,7 @@ export default function SocialLinks() {
             },
             {
                 title: "Email Address",
-                href: "mailto: info@ju.ac.ae",
+                href: "mailto: doubleclicktr@crownphoenixadv.com",
                 target: "_blank",
                 icon: (
                     <div className="flex overflow-hidden rounded-lg w-7 h-7 bg-primary">

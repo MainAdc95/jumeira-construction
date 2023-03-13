@@ -7,7 +7,7 @@ export default function ContactForm() {
     return (
         <div>
             <a
-                href="mailto: info@ju.ac.ae"
+                href="mailto: doubleclicktr@crownphoenixadv.com"
                 className="text-white bg-primary hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-primary/55 mr-2 mb-2"
             >
                 <EnvelopeIcon className="w-5 h-5 mr-2" />
