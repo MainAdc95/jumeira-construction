@@ -8,12 +8,12 @@ export default function ContactForm() {
         <div>
             <a
                 href="mailto: info@ju.ac.ae"
-                className="text-white bg-[#c3af6c] hover:bg-[#c3af6c]/90 focus:ring-4 focus:outline-none focus:ring-[#c3af6c]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#c3af6c]/55 mr-2 mb-2"
+                className="text-white bg-primary hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-primary/55 mr-2 mb-2"
             >
                 <EnvelopeIcon className="w-5 h-5 mr-2" />
                 Contact Us
             </a>
-            {/* <button className="text-white bg-[#c3af6c] hover:bg-[#c3af6c]/90 focus:ring-4 focus:outline-none focus:ring-[#c3af6c]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#c3af6c]/55 mr-2 mb-2">
+            {/* <button className="text-white bg-primary hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-primary/55 mr-2 mb-2">
 
                 <EnvelopeIcon className="w-5 h-5 mr-2" />
                 Contact Us

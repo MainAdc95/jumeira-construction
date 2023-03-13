@@ -7,6 +7,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            colors: {
+                primary: "#ee5c2a",
+            },
             backgroundPosition: {
                 "offset-center": "0% 65%",
             },
