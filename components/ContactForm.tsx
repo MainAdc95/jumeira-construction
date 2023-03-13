@@ -192,16 +192,16 @@ export default function ContactForm() {
     );
 }
 
-function InputField(
-    props: DetailedHTMLProps<
-        InputHTMLAttributes<HTMLInputElement>,
-        HTMLInputElement
-    >
-) {
-    return (
-        <input
-            className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
-            {...props}
-        />
-    );
-}
+// function InputField(
+//     props: DetailedHTMLProps<
+//         InputHTMLAttributes<HTMLInputElement>,
+//         HTMLInputElement
+//     >
+// ) {
+//     return (
+//         <input
+//             className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
+//             {...props}
+//         />
+//     );
+// }
